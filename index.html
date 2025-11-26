@@ -104,7 +104,11 @@
   </script>
 
   <a-scene
-    mindar-image= "imageTargetSrc: https://raw.githubusercontent.com/Gitboi46/Ar-business-card/main/targets%20(1)%20(1).mind;"
+    mindar-image="imageTargetSrc: https://raw.githubusercontent.com/Gitboi46/Ar-business-card/main/targets%20(1)%20(1).mind;
+                  filterMinCF:0.0001; 
+                  filterBeta:0.01;
+                  warmupTolerance:5;
+                  missTolerance:5;"
     color-space="sRGB"
     renderer="colorManagement:true; physicallyCorrectLights:true;"
     vr-mode-ui="enabled:false"
@@ -151,8 +155,8 @@
                class="clickable"
                position="0 0.5 0.45"
                rotation="90 0 0"
-               width="2.1"        
-               height="1.4"       
+               width="2.1"
+               height="1.4"
                chromakey-material="src: #arVideo; color: #0000FF; threshold: 0.4; smoothness: 0.15"
                visible="false">
       </a-plane>
@@ -174,7 +178,6 @@
       <a-plane id="fbBtnAR" class="clickable" position="0.65 0.22 0.01" width="0.20" height="0.20" material="src:#fbIconImg; transparent:true;" link-trigger="action: facebook" visible="false"></a-plane>
       <a-plane id="igBtnAR" class="clickable" position="0.65 0.00 0.01" width="0.20" height="0.20" material="src:#igIconImg; transparent:true;" link-trigger="action: instagram" visible="false"></a-plane>
       <a-plane id="lnBtnAR" class="clickable" position="0.65 -0.22 0.01" width="0.20" height="0.20" material="src:#lnIconImg; transparent:true;" link-trigger="action: linkedin" visible="false"></a-plane>
-
     </a-entity>
 
     <a-entity light="type:ambient; intensity:1; color:#ffffff"></a-entity>
